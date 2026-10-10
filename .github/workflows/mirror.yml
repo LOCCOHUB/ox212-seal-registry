@@ -1,7 +1,9 @@
 name: Mirror OX212 seals
 on:
+  # Twice an hour: GitHub may delay or drop a scheduled run, the next one catches up.
   schedule:
-    - cron: '25 * * * *'
+    - cron: '17 * * * *'
+    - cron: '47 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
