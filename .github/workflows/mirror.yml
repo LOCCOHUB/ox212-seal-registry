@@ -1,0 +1,23 @@
+name: Mirror OX212 seals
+on:
+  schedule:
+    - cron: '25 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy the public registry
+        run: python3 scripts/mirror.py
+      - name: Check the chain
+        run: python3 scripts/check_chain.py
+      - name: Commit
+        run: |
+          git config user.name "ox212-seal-mirror"
+          git config user.email "seal-mirror@ox212.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Seals as of $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
