@@ -1,3 +1,41 @@
+# OX212 · Public seal registry
+
+A public, independent copy of every OX212 seal.
+
+**What a seal is.** Every hour, OX212 gathers the fingerprint of everything it recorded in that hour: Guard
+receipts, sessions read by the engine, forecasts and their checks, interventions and what happened next. Those
+fingerprints form a Merkle tree; its root is chained to the previous seal and written into a small public manifest
+(`ox212-seal-<id>.json`). The manifest's sha256 is anchored in Bitcoin with [OpenTimestamps](https://opentimestamps.org),
+an open standard.
+
+**What is not here.** No personal data: only fingerprints, counts and times. Every record carries a private salt, so
+nothing can be learned from a fingerprint. If someone deletes their account, OX212 deletes that salt too.
+
+**Why this repository.** Git's history is an independent witness of when each seal was published. Manifests are never
+rewritten here: if a seal ever changed, it would show.
+
+## How to verify a seal
+
+1. Install the official client: `pip install opentimestamps-client`.
+2. In the seal's folder, run `ots verify ox212-seal-<id>.json.ots`.
+   The second proof, from another calendar: `ots verify -f ox212-seal-<id>.json ox212-seal-<id>.json.b.ots`.
+3. To walk the chain, `scripts/check_chain.py` checks that every seal continues the one before:
+   `chain = sha256(prev_chain || root)`.
+
+For the first hours a proof says «pending». Once the calendar includes the fingerprint in a Bitcoin block, the proof
+updates here on its own and points to that block.
+
+## Rules
+
+- `leaf = sha256(salt || sha256(content))`: each record, with its private salt.
+- `node = sha256(0x01 || left || right)`: the tree's nodes; an odd node is paired with itself.
+- `chain = sha256(prev_chain || root)`: each seal continues the one before.
+- What is anchored in Bitcoin is the `sha256` of the seal's manifest, exactly as published.
+
+A trader can verify their own records with their evidence package: content, salt and path to the root.
+
+---
+
 # OX212 · Registro público del sello
 
 Este repositorio guarda una copia pública e independiente de cada sello de OX212.
@@ -32,13 +70,3 @@ prueba se actualiza aquí sola y ya apunta a ese bloque.
 - Lo que se ancla en Bitcoin es el `sha256` del documento del sello, tal cual está publicado.
 
 Un trader puede comprobar sus propios registros con su paquete de evidencia: contenido, sal y camino hasta la raíz.
-
----
-
-# OX212 · Public seal registry
-
-A public, independent copy of every OX212 seal. Every hour, the fingerprints of everything OX212 recorded (Guard
-receipts, engine readings, forecasts and their checks, interventions and their outcomes) form a Merkle tree; its
-root is chained to the previous seal and written into a small public manifest whose sha256 is anchored in Bitcoin
-with OpenTimestamps. No personal data: only salted hashes, counts and times. Verify with
-`ots verify ox212-seal-<id>.json.ots`, and the chain with `scripts/check_chain.py`.
