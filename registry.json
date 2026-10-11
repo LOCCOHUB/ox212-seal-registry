@@ -49,8 +49,8 @@
         },
         {
           "calendar": "https://b.pool.opentimestamps.org",
-          "status": "pending",
-          "bitcoin_block": null,
+          "status": "bitcoin",
+          "bitcoin_block": 970984,
           "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/2/ots?n=1"
         }
       ]
