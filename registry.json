@@ -8,6 +8,30 @@
   "how_to_verify": "Download a manifest and one of its .ots proofs into the same folder, then run: ots verify ox212-seal-<id>.json.ots (https://opentimestamps.org).",
   "seals": [
     {
+      "id": 12,
+      "sealed_at": "2026-10-14T00:07:04.752227+00:00",
+      "records": 1,
+      "root": "eabd0bc7c0e4a093cee475e402774b83917d6019511a36842640eaf4a3fe8153",
+      "prev_chain": "b72fea4ee6c95817ba554018081f07d6d3daa0d0907aa2889c9ddd6b310d9213",
+      "chain": "b6744896557cbb35c6bc702f59c760108fc5dea3acba345cd1087ffbda066a47",
+      "manifest_sha256": "51f848f9412d7a36b78fa7be68f4ff82776fd4bd1eaf8c5ff3f60a070abd8e21",
+      "manifest": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/12",
+      "proofs": [
+        {
+          "calendar": "https://a.pool.opentimestamps.org",
+          "status": "pending",
+          "bitcoin_block": null,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/12/ots?n=0"
+        },
+        {
+          "calendar": "https://b.pool.opentimestamps.org",
+          "status": "pending",
+          "bitcoin_block": null,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/12/ots?n=1"
+        }
+      ]
+    },
+    {
       "id": 11,
       "sealed_at": "2026-10-13T22:07:08.274822+00:00",
       "records": 1,
@@ -19,14 +43,14 @@
       "proofs": [
         {
           "calendar": "https://a.pool.opentimestamps.org",
-          "status": "pending",
-          "bitcoin_block": null,
+          "status": "bitcoin",
+          "bitcoin_block": 971315,
           "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/11/ots?n=0"
         },
         {
           "calendar": "https://b.pool.opentimestamps.org",
-          "status": "pending",
-          "bitcoin_block": null,
+          "status": "bitcoin",
+          "bitcoin_block": 971319,
           "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/11/ots?n=1"
         }
       ]
