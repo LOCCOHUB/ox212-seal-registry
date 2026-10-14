@@ -19,14 +19,14 @@
       "proofs": [
         {
           "calendar": "https://a.pool.opentimestamps.org",
-          "status": "pending",
-          "bitcoin_block": null,
+          "status": "bitcoin",
+          "bitcoin_block": 971322,
           "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/12/ots?n=0"
         },
         {
           "calendar": "https://b.pool.opentimestamps.org",
-          "status": "pending",
-          "bitcoin_block": null,
+          "status": "bitcoin",
+          "bitcoin_block": 971323,
           "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/12/ots?n=1"
         }
       ]
