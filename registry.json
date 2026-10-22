@@ -1,7 +1,7 @@
 {
   "format": "ox212-seal-registry/1",
   "cadence": "Every hour OX212 looks for new or changed records; a seal is closed only when there is something new to seal.",
-  "checked_at": "2026-10-22T10:07:05.992+00:00",
+  "checked_at": "2026-10-22T15:07:06.569+00:00",
   "rules": {
     "leaf": "leaf = sha256(salt || sha256(content))",
     "tree": "node = sha256(0x01 || left || right); an odd node is paired with itself",
@@ -9,6 +9,30 @@
   },
   "how_to_verify": "Download a manifest and one of its .ots proofs into the same folder, then run: ots verify ox212-seal-<id>.json.ots (https://opentimestamps.org).",
   "seals": [
+    {
+      "id": 18,
+      "sealed_at": "2026-10-22T11:07:06.083518+00:00",
+      "records": 20,
+      "root": "c60cf98c48cffc6c1acdd002076f7d8b35e827e05ccac0355749870901c323e6",
+      "prev_chain": "0a3ab4fa28c88062fe909a2edc370ff348147c16ec1fecf70edcde5cb9a2cd11",
+      "chain": "e38419025a4594845df79d634f808844d3e4e256a2070b515a6ecef51901805b",
+      "manifest_sha256": "d91ad37c225118d131a44786399b3ff7725095eb73842e590727dc992d478734",
+      "manifest": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/18",
+      "proofs": [
+        {
+          "calendar": "https://a.pool.opentimestamps.org",
+          "status": "bitcoin",
+          "bitcoin_block": 972610,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/18/ots?n=0"
+        },
+        {
+          "calendar": "https://b.pool.opentimestamps.org",
+          "status": "bitcoin",
+          "bitcoin_block": 972611,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/18/ots?n=1"
+        }
+      ]
+    },
     {
       "id": 17,
       "sealed_at": "2026-10-22T10:07:06.749097+00:00",
@@ -21,14 +45,14 @@
       "proofs": [
         {
           "calendar": "https://a.pool.opentimestamps.org",
-          "status": "pending",
-          "bitcoin_block": null,
+          "status": "bitcoin",
+          "bitcoin_block": 972604,
           "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/17/ots?n=0"
         },
         {
           "calendar": "https://b.pool.opentimestamps.org",
-          "status": "pending",
-          "bitcoin_block": null,
+          "status": "bitcoin",
+          "bitcoin_block": 972605,
           "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/17/ots?n=1"
         }
       ]
