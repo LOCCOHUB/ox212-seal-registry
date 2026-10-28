@@ -1,7 +1,7 @@
 {
   "format": "ox212-seal-registry/1",
   "cadence": "Every hour OX212 looks for new or changed records; a seal is closed only when there is something new to seal.",
-  "checked_at": "2026-10-27T22:07:07.186+00:00",
+  "checked_at": "2026-10-28T00:07:06.362+00:00",
   "rules": {
     "leaf": "leaf = sha256(salt || sha256(content))",
     "tree": "node = sha256(0x01 || left || right); an odd node is paired with itself",
