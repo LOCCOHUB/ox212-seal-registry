@@ -1,7 +1,7 @@
 {
   "format": "ox212-seal-registry/1",
   "cadence": "Every hour OX212 looks for new or changed records; a seal is closed only when there is something new to seal.",
-  "checked_at": "2026-11-13T22:07:05.315+00:00",
+  "checked_at": "2026-11-13T23:07:05.536+00:00",
   "rules": {
     "leaf": "leaf = sha256(salt || sha256(content))",
     "tree": "node = sha256(0x01 || left || right); an odd node is paired with itself",
@@ -9,6 +9,30 @@
   },
   "how_to_verify": "Download a manifest and one of its .ots proofs into the same folder, then run: ots verify ox212-seal-<id>.json.ots (https://opentimestamps.org).",
   "seals": [
+    {
+      "id": 117,
+      "sealed_at": "2026-11-13T23:07:05.658524+00:00",
+      "records": 13,
+      "root": "c22dc58247ae685ae5ea59b5507aa18fa6e68ec2d7f726d59eab873a6b6c66e3",
+      "prev_chain": "ced94e232bde7a137dd9670bcff9f32ea054742928313a51986eeb478195983f",
+      "chain": "c8d0001168d47164e9382115f8a6f1e33d11d700a1022f1f7ef706471cd30e54",
+      "manifest_sha256": "4bb78aebe666dc22e849910c3b9ef2cca8537d98ae0c78117b5e40c9788d929a",
+      "manifest": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/117",
+      "proofs": [
+        {
+          "calendar": "https://a.pool.opentimestamps.org",
+          "status": "pending",
+          "bitcoin_block": null,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/117/ots?n=0"
+        },
+        {
+          "calendar": "https://b.pool.opentimestamps.org",
+          "status": "pending",
+          "bitcoin_block": null,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/117/ots?n=1"
+        }
+      ]
+    },
     {
       "id": 116,
       "sealed_at": "2026-11-13T21:07:05.046036+00:00",
@@ -21,8 +45,8 @@
       "proofs": [
         {
           "calendar": "https://a.pool.opentimestamps.org",
-          "status": "pending",
-          "bitcoin_block": null,
+          "status": "bitcoin",
+          "bitcoin_block": 975717,
           "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/116/ots?n=0"
         },
         {
