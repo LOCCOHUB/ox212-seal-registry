@@ -1,7 +1,7 @@
 {
   "format": "ox212-seal-registry/1",
   "cadence": "Every hour OX212 looks for new or changed records; a seal is closed only when there is something new to seal.",
-  "checked_at": "2026-11-20T03:07:00.618+00:00",
+  "checked_at": "2026-11-20T10:07:00.421+00:00",
   "rules": {
     "leaf": "leaf = sha256(salt || sha256(content))",
     "tree": "node = sha256(0x01 || left || right); an odd node is paired with itself",
@@ -9,6 +9,78 @@
   },
   "how_to_verify": "Download a manifest and one of its .ots proofs into the same folder, then run: ots verify ox212-seal-<id>.json.ots (https://opentimestamps.org).",
   "seals": [
+    {
+      "id": 155,
+      "sealed_at": "2026-11-20T10:07:00.58779+00:00",
+      "records": 2,
+      "root": "fe9256de89c7885ae5ed360616b796e3458d5c0fa4c02a915f70ab16939717be",
+      "prev_chain": "254de758cff0bd30ef130272b4505b375cba4cd915eff3d6e0d57a3ee76641ad",
+      "chain": "4b37cc3a88820b81a07bb301d36e97f71aad735f10a90ebe0e890979aeeef1e9",
+      "manifest_sha256": "d9cce8c5b7281c53783038b6d5e3b90dff81fa25293a5a992b0e7c3bce917d71",
+      "manifest": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/155",
+      "proofs": [
+        {
+          "calendar": "https://a.pool.opentimestamps.org",
+          "status": "pending",
+          "bitcoin_block": null,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/155/ots?n=0"
+        },
+        {
+          "calendar": "https://b.pool.opentimestamps.org",
+          "status": "pending",
+          "bitcoin_block": null,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/155/ots?n=1"
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "sealed_at": "2026-11-20T09:07:00.897049+00:00",
+      "records": 4,
+      "root": "87adba465ef91200f0d65933748b80008e515357809a729fb7c238360355ab56",
+      "prev_chain": "472ca8f75bf86299a973f599cd60f2b8f441916e5c1a8018984a52b267802682",
+      "chain": "254de758cff0bd30ef130272b4505b375cba4cd915eff3d6e0d57a3ee76641ad",
+      "manifest_sha256": "1814efb81f009f3b50f481088ffa26da4a0d5c5dafeb55d0e46c7ee9e1ac5a57",
+      "manifest": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/154",
+      "proofs": [
+        {
+          "calendar": "https://a.pool.opentimestamps.org",
+          "status": "pending",
+          "bitcoin_block": null,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/154/ots?n=0"
+        },
+        {
+          "calendar": "https://b.pool.opentimestamps.org",
+          "status": "pending",
+          "bitcoin_block": null,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/154/ots?n=1"
+        }
+      ]
+    },
+    {
+      "id": 153,
+      "sealed_at": "2026-11-20T07:07:00.56339+00:00",
+      "records": 1,
+      "root": "f1b7ec68ff59d698c61d480a7f6384f7cce993ff929e3fe3254a65225741ab17",
+      "prev_chain": "c2083b394fe1767024af573fa9d94c7510d58c4d845c0e45360e187f640bbd36",
+      "chain": "472ca8f75bf86299a973f599cd60f2b8f441916e5c1a8018984a52b267802682",
+      "manifest_sha256": "b32124ca174a3486c9ed22e8d20422bc55ec629ac73eeaac3c4a72258c1a2748",
+      "manifest": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/153",
+      "proofs": [
+        {
+          "calendar": "https://a.pool.opentimestamps.org",
+          "status": "bitcoin",
+          "bitcoin_block": 976704,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/153/ots?n=0"
+        },
+        {
+          "calendar": "https://b.pool.opentimestamps.org",
+          "status": "bitcoin",
+          "bitcoin_block": 976704,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/153/ots?n=1"
+        }
+      ]
+    },
     {
       "id": 152,
       "sealed_at": "2026-11-20T00:07:00.5526+00:00",
