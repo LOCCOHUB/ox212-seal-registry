@@ -1,0 +1,15 @@
+{
+  "format": "ox212-seal/1",
+  "sealed_at": "2026-11-25T07:07:00.464Z",
+  "leaves": 1,
+  "first_leaf": 1271,
+  "last_leaf": 1271,
+  "root": "ffc224a57f661c78f4f59ca23c1eda732ac17f31ae852502568bc421da5b5c62",
+  "prev_chain": "2bfb13de60a834c65d354b15908b838a5e19397eb1a2fa76b5905141aec89960",
+  "chain": "7e79e91f1b7dd9511bb7e1367db62b887665080f03e91a12f29ead7c84505762",
+  "rules": {
+    "leaf": "leaf = sha256(salt || sha256(content))",
+    "tree": "node = sha256(0x01 || left || right); an odd node is paired with itself",
+    "chain": "chain = sha256(prev_chain || root)"
+  }
+}
