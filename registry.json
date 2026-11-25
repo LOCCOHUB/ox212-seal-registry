@@ -1,7 +1,7 @@
 {
   "format": "ox212-seal-registry/1",
   "cadence": "Every hour OX212 looks for new or changed records; a seal is closed only when there is something new to seal.",
-  "checked_at": "2026-11-25T10:07:00.406+00:00",
+  "checked_at": "2026-11-25T15:07:00.312+00:00",
   "rules": {
     "leaf": "leaf = sha256(salt || sha256(content))",
     "tree": "node = sha256(0x01 || left || right); an odd node is paired with itself",
@@ -9,6 +9,30 @@
   },
   "how_to_verify": "Download a manifest and one of its .ots proofs into the same folder, then run: ots verify ox212-seal-<id>.json.ots (https://opentimestamps.org).",
   "seals": [
+    {
+      "id": 180,
+      "sealed_at": "2026-11-25T13:07:00.494514+00:00",
+      "records": 2,
+      "root": "746426097811b20a94ba31244634c6746bba364324a417a3094f549db842eb5a",
+      "prev_chain": "7e79e91f1b7dd9511bb7e1367db62b887665080f03e91a12f29ead7c84505762",
+      "chain": "3bcf20f4625db519da026f938646f77600f59d4f48aa3482591090397bcce223",
+      "manifest_sha256": "2d4fe6682e44e25bf655d9f304198a6300b8022782295007ea930c1cfe9704cc",
+      "manifest": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/180",
+      "proofs": [
+        {
+          "calendar": "https://a.pool.opentimestamps.org",
+          "status": "bitcoin",
+          "bitcoin_block": 977522,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/180/ots?n=0"
+        },
+        {
+          "calendar": "https://b.pool.opentimestamps.org",
+          "status": "bitcoin",
+          "bitcoin_block": 977522,
+          "ots": "https://app-beta--ox212-ctrader-demo-20260820.netlify.app/api/public/seal/180/ots?n=1"
+        }
+      ]
+    },
     {
       "id": 179,
       "sealed_at": "2026-11-25T07:07:00.674269+00:00",
